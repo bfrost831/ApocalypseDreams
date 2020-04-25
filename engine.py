@@ -278,10 +278,10 @@ def play_game(player, entities, game_map, message_log, game_state, con, panel, c
                     dequipped = equip_result.get('dequipped')
 
                     if equipped:
-                        message_log.add_message(Message('You equipped the {0}'.format(equipped.name)))
+                        message_log.add_message(Message('You equipped the {0}.'.format(equipped.name)))
 
                     if dequipped:
-                        message_log.add_message(Message('You dequipped the {0}'.format(dequipped.name)))
+                        message_log.add_message(Message('You dequipped the {0}.'.format(dequipped.name)))
 
                 game_state = GameStates.ENEMY_TURN
 
@@ -296,7 +296,7 @@ def play_game(player, entities, game_map, message_log, game_state, con, panel, c
             if targeting_cancelled:
                 game_state = previous_game_state
                 
-                message_log.add_message(Message('Targeting cancelled'))
+                message_log.add_message(Message('Targeting cancelled.'))
 
             if xp:
                 leveled_up = player.level.add_xp(xp)
